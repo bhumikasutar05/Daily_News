@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Daily News</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="main-nav container flex">
+        <!-- Logo -->
+        <a href="#" class="com-logo">
+          <img src="./assets/Logo1.png" alt="logo" />
+        </a>
+
+        <!-- Links -->
+        <div class="nav-links">
+          <ul class="flex">
+            <li>
+              <a
+                href="#"
+                class="hover-link nav-item"
+                id="cricket"
+                onclick="onNavItemClick('cricket')"
+                >Cricket</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover-link nav-item"
+                id="india"
+                onclick="onNavItemClick('india')"
+                >India</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover-link nav-item"
+                id="technology"
+                onclick="onNavItemClick('technology')"
+                >Technology</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover-link nav-item"
+                id="politics"
+                onclick="onNavItemClick('politics')"
+                >Politics</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Search Button -->
+        <div class="search-bar flex">
+          <input
+            type="text"
+            class="news-input"
+            id="search-text"
+            placeholder="e.g. Science"
+          />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <div class="cards-container container flex" id="cardscontainer"></div>
+    </main>
+
+    <template id="template-news-card">
+      <div class="card">
+        <div class="card-header">
+          <img
+            src="https://via.placeholder.com/400x200"
+            alt="cards"
+            id="news-img"
+          />
+        </div>
+
+        <div class="card-content">
+          <h3 id="news-title">This is the Title</h3>
+          <h6 class="news-source" id="news-source">
+            The Daily News 04/10/2024
+          </h6>
+          <p class="news-desc" id="news-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            consectetur possimus pariatur dolore assumenda quaerat beatae
+            quisquam molestiae eius maiores.
+          </p>
+        </div>
+      </div>
+    </template>
+
+    <script src="./App.js"></script>
+  </body>
+</html>
